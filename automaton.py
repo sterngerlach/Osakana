@@ -125,12 +125,9 @@ class FishAutomatonTitForTat(FishAutomaton):
         self.states[1] = "w"
         
         # 2回目以降は前回に相手が出した手と同じ手を選択
-        self.transitions[1] = { "g": 2, "w": 3 }
+        self.transitions[1] = { "g": 2, "w": 1 }
         self.states[2] = "g"
-        self.states[3] = "w"
-        
-        self.transitions[2] = { "g": 2, "w": 3 }
-        self.transitions[3] = { "g": 2, "w": 3 }
+        self.transitions[2] = { "g": 2, "w": 1 }
         
         # 初期状態を設定
         self.init_state = 1
@@ -148,12 +145,9 @@ class FishAutomatonReverseTitForTat(FishAutomaton):
         self.states[1] = "g"
         
         # 2回目以降は前回に相手が出した手と同じ手を選択
-        self.transitions[1] = { "g": 2, "w": 3 }
+        self.transitions[1] = { "g": 2, "w": 1 }
         self.states[2] = "g"
-        self.states[3] = "w"
-        
-        self.transitions[2] = { "g": 2, "w": 3 }
-        self.transitions[3] = { "g": 2, "w": 3 }
+        self.transitions[2] = { "g": 2, "w": 1 }
         
         # 初期状態を設定
         self.init_state = 1
