@@ -7,7 +7,7 @@ Python 3で書かれたお魚オートマトンのシミュレータのような
 
 - お魚オートマトンは、`automaton.py`に定義された`FishAutomaton`クラスを継承する必要があります。
 - 幾つかの単純な戦略に対するオートマトンは既に作成済みです。しっぺ返し戦略に対しては`FishAutomatonTitForTat`クラスが、逆しっぺ返し戦略に対しては`FishAutomatonReverseTitForTat`クラスが、堪忍袋戦略に対しては`FishAutomatonTitForTwoTats`クラスが、フリードマン戦略に対しては`FishAutomatonFriedman`クラスが、善人戦略に対しては`FishAutomatonAllC`クラスが、そして悪人戦略に対しては`FishAutomatonAllD`クラスがそれぞれ用意されています。これらのクラスをみればオートマトンの定義の仕方が分かると思います。
-- 以下に示すクラスの使用法は`main.py`をみれば分かります。
+- 以下に示すクラスの使用法は`main.py`をみれば分かります。`main.py`を実行するためには、`custom.py`を新たに作成し、`FishAutomaton`クラスを継承した`CustomAutomaton`クラスを記述する必要があります。
 
 ### `FishAutomaton`クラス
 - `load_dfa_str`メソッドは、課題で指示されたフォーマットに従って記述された、オートマトンを表現する文字列を読み取って、`FishAutomaton`クラスのオブジェクトとして利用可能にするためのものです。
