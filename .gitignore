@@ -4,6 +4,12 @@
 # Several classes for my automata
 custom.py
 
+# Directory storing match results
+match_results/
+
+# Configuration file
+config.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
