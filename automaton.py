@@ -47,9 +47,12 @@ class FishAutomaton(object):
         dfa_str = ""
         
         for state, trans in self.transitions.items():
+            state_go = "?" if "g" not in trans else trans["g"]
+            state_wait = "?" if "w" not in trans else trans["w"]
+            action = "?" if state not in self.states else self.states[state]
             dfa_str += "{0}:{1},{2},{3}\n".format(
-                        state, self.states[state],
-                        trans["g"], trans["w"])
+                        state, action,
+                        state_go, state_wait)
         
         return dfa_str.rstrip()
         
